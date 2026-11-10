@@ -1,0 +1,134 @@
+# ---------------------------------------------------------------------------
+# Site configuration for the personal engineering notebook
+# ---------------------------------------------------------------------------
+
+title: "Systems & Modelling Notes"
+description: >-
+  Short essays and benchmark write-ups on reliable data pipelines,
+  retrieval systems and model evaluation.
+url: "https://notes.example-lab.dev"
+baseurl: ""
+repository: "internal/notes-site"
+
+# Language and locale
+lang: en
+timezone: Europe/Rome
+encoding: utf-8
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:title/
+future: true
+show_drafts: false
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+paginate: 8
+paginate_path: "/page:num/"
+excerpt_separator: "<!--more-->"
+
+# Collections rendered as standalone pages
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+  benchmarks:
+    output: true
+    permalink: /benchmarks/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: "_benchmarks"
+      type: benchmarks
+    values:
+      layout: benchmark
+      sidebar: true
+
+# Theme and navigation
+theme: minima
+minimal_mistakes_skin: "default"
+
+navigation:
+  - title: Home
+    url: /
+  - title: Notes
+    url: /notes/
+  - title: Projects
+    url: /projects/
+  - title: Scoreboard
+    url: /scoreboard/
+
+# Comments and analytics
+disqus:
+  shortname: ""
+google_analytics: ""
+matomo_site_id: ""
+
+# Site-wide social preview
+social:
+  type: Person
+  image: /assets/images/preview-card.png
+  twitter_card: summary_large_image
+
+# Author / contact block
+# The values below are inherited from the starter template and are placeholders.
+author:
+  name: "Jordan Demo"
+  email: "jordan.demo@protonmail.com"
+  github: "demo-author"
+  twitter: "demo_author"
+  mastodon: "@demo@example.social"
+  bluesky: "demo.author.bsky.social"
+  orcid: "0000-0001-5109-3700"
+  avatar: "/assets/images/author-avatar.jpg"
+  bio: >-
+    Writer of short technical notes. Placeholder biography from the starter
+    template, to be replaced before publishing.
+
+# Footer
+footer:
+  since: 2024
+  powered_by: ""
+  show_social_links: true
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - scripts
+
+# Build performance
+strict_front_matter: false
+verbose: false
+liquid:
+  error_mode: warn
