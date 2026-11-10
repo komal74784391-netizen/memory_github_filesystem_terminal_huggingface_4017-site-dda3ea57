@@ -94,17 +94,15 @@ social:
 # Author / contact block
 # The values below are inherited from the starter template and are placeholders.
 author:
-  name: "Jordan Demo"
-  email: "jordan.demo@protonmail.com"
-  github: "demo-author"
-  twitter: "demo_author"
-  mastodon: "@demo@example.social"
-  bluesky: "demo.author.bsky.social"
-  orcid: "0000-0001-5109-3700"
+  name: "Ilaria Bianchi"
+  email: "ilaria.bianchi@fastmail.com"
+  github: "ibianchi-dev"
+  mastodon: "@ilaria@hachyderm.io"
+  bluesky: "ilariabianchi.bsky.social"
   avatar: "/assets/images/author-avatar.jpg"
   bio: >-
-    Writer of short technical notes. Placeholder biography from the starter
-    template, to be replaced before publishing.
+    Staff machine learning engineer. Writing about retrieval systems,
+    evaluation methodology and data quality.
 
 # Footer
 footer:
